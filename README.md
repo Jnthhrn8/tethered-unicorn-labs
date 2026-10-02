@@ -1,13 +1,15 @@
 # Tethered Unicorn Labs public website
 
-Public company website for **Tethered Unicorn Labs**, with **Unicorn Forge** as the flagship product.
+Public company website for **Tethered Unicorn Labs**, a product lab making personalized software and AI-driven hardware more attainable and playful. The first product tracks are **Unicorn Forge** and **UniCrypt**.
 
 ## Public pages
 
 - `index.html` — colorful Tethered Unicorn Labs company homepage;
 - `forge.html` — dedicated black-and-gold Unicorn Forge product page;
+- `unicrypt.html` — dedicated UniCrypt founders-prototype page;
+- `investors.html` — early investor overview and funding cases;
 - `contact.html` — direct contact form plus deliberately selected email and phone links;
-- `partners.html` — sponsorship and affiliate-partnership information.
+- `partners.html` — colorful collaboration, sponsorship, and affiliate-partnership information.
 
 ## Boundaries
 
@@ -32,7 +34,7 @@ The canonical domain is `tetheredunicorn.com`. The included `CNAME` file support
 - Complete preliminary trademark and entity-name clearance.
 - Replace the provisional company-formation footer once the legal entity exists.
 - Add reviewed privacy, terms, accessibility, and contact pages.
-- [x] Configure `theunicorn@tetheredunicorn.com` to forward through Cloudflare Email Routing.
+- [ ] Verify end-to-end delivery for `theunicorn@tetheredunicorn.com`; routing is configured but receipt is not yet proven.
 - Optimize the PNG brand asset and add social-card variants.
 - Test mobile layout, accessibility, links, metadata, and HTTPS.
 

@@ -1,0 +1,13 @@
+/* Small, code-native flourishes shared by the pastel Labs pages. */
+.idea-console{position:absolute;z-index:5;left:-45px;top:5px;width:260px;padding:18px 20px 20px;border:2px solid var(--ink);border-radius:22px;background:#fffdfbe8;box-shadow:8px 8px 0 var(--mint);transform:rotate(-3deg);backdrop-filter:blur(12px)}
+.idea-console>span{display:block;color:#a64282;font-size:.62rem;font-weight:900;letter-spacing:.16em}
+.idea-console strong{display:block;margin:8px 0 3px;font:400 1.55rem/1 var(--serif)}
+.idea-console small{display:block;color:var(--muted);line-height:1.35}
+.mini-circuit{position:relative;height:25px;margin-top:13px;border-top:2px solid #9bdac6}
+.mini-circuit:before,.mini-circuit:after{content:"";position:absolute;top:-5px;width:8px;height:8px;border:2px solid var(--ink);border-radius:50%;background:var(--yellow)}
+.mini-circuit:before{left:0}.mini-circuit:after{right:0;background:var(--pink)}
+.mini-circuit i{position:absolute;top:-2px;width:2px;height:13px;background:#9bdac6}
+.mini-circuit i:nth-child(1){left:26%}.mini-circuit i:nth-child(2){left:50%}.mini-circuit i:nth-child(3){left:74%}
+.mini-circuit b{position:absolute;right:46%;top:4px;color:#b14487}
+@media(max-width:900px){.hero-mark{min-height:500px;padding-top:70px}.idea-console{left:0;top:0;width:235px}}
+@media(max-width:520px){.idea-console{left:10px;transform:rotate(-2deg) scale(.9);transform-origin:top left}}
