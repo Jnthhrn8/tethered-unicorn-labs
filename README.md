@@ -32,7 +32,7 @@ The canonical domain is `tetheredunicorn.com`. The included `CNAME` file support
 - Complete preliminary trademark and entity-name clearance.
 - Replace the provisional company-formation footer once the legal entity exists.
 - Add reviewed privacy, terms, accessibility, and contact pages.
-- Configure a domain-based email address.
+- [x] Configure `theunicorn@tetheredunicorn.com` to forward through Cloudflare Email Routing.
 - Optimize the PNG brand asset and add social-card variants.
 - Test mobile layout, accessibility, links, metadata, and HTTPS.
 
