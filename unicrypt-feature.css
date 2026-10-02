@@ -1,0 +1,32 @@
+.unicrypt-feature {
+  width: 100% !important;
+  max-width: none !important;
+  display: grid;
+  grid-template-columns: minmax(320px, .9fr) minmax(420px, 1.1fr);
+  gap: clamp(42px, 7vw, 100px);
+  align-items: center;
+  padding-left: max(24px, calc((100vw - 1240px) / 2)) !important;
+  padding-right: max(24px, calc((100vw - 1240px) / 2)) !important;
+  background: radial-gradient(circle at 12% 20%, #df71ff2c, transparent 34rem), linear-gradient(145deg, #0b0711, #101927);
+  color: white;
+}
+.unicrypt-visual img {
+  display: block;
+  width: min(100%, 540px);
+  margin: auto;
+  border: 1px solid #ffffff24;
+  border-radius: 28px;
+  box-shadow: 0 38px 100px #0009, 18px 18px 0 #653f8066;
+}
+.unicrypt-copy .section-number { color: #60ddff; }
+.unicrypt-copy > p:not(.section-number):not(.product-label) { color: #c9c4d7; font-size: 1.08rem; }
+.unicrypt-copy ul { margin: 28px 0; padding-left: 1.15rem; color: #d8d3e2; }
+.unicrypt-copy li { margin: 10px 0; }
+.unicrypt-price { display: flex; align-items: baseline; gap: 14px; margin: 30px 0; }
+.unicrypt-price strong { font: 400 clamp(2.8rem, 5vw, 4.8rem) var(--serif); color: #c680ff; }
+.unicrypt-price span { max-width: 260px; color: #8f92a4; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; }
+.unicrypt-feature .button { background: linear-gradient(120deg, #c477ff, #51d7ff); }
+@media (max-width: 900px) {
+  .unicrypt-feature { grid-template-columns: 1fr; }
+  .unicrypt-visual img { max-height: 620px; width: auto; max-width: 100%; }
+}

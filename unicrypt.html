@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0711" />
+    <meta name="description" content="UniCrypt is Tethered Unicorn Labs’ founders prototype for local, self-contained file compression and authenticated encryption." />
+    <meta property="og:title" content="UniCrypt · Tethered Unicorn Labs" />
+    <meta property="og:description" content="Private files. Physical key. No cloud required." />
+    <meta property="og:image" content="assets/unicrypt-founders-prototype.png" />
+    <title>UniCrypt · Private files, physical key</title>
+    <link rel="icon" type="image/png" href="assets/unicorn-logo.png" />
+    <link rel="stylesheet" href="labs.css" />
+    <link rel="stylesheet" href="unicrypt-page.css" />
+  </head>
+  <body class="unicrypt-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tethered Unicorn Labs home">
+        <img src="assets/unicorn-logo.png" alt="" />
+        <span><strong>TETHERED UNICORN</strong><small>LABS</small></span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">The Lab</a>
+        <a href="forge.html">Unicorn Forge</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#funding">Seed plan</a>
+        <a class="nav-cta" href="contact.html?topic=investor">Investor conversation</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="unicrypt-hero">
+        <div class="unicrypt-hero-copy">
+          <p class="eyebrow">FOUNDERS PROTOTYPE · FLAGSHIP HARDWARE</p>
+          <h1>Private files.<br /><em>Physical key.</em><br />No cloud required.</h1>
+          <p class="lede">UniCrypt is a self-contained file compression and encryption appliance. The computer supplies files through a local browser interface; the device performs the work and keeps its master-key material off the host.</p>
+          <div class="actions"><a class="button" href="#funding">See the seed plan</a><a class="button secondary" href="contact.html?topic=investor">Request a private conversation</a></div>
+          <p class="prototype-note">Experimental hardware prototype—not yet a certified security product or a retail offer.</p>
+        </div>
+        <figure class="unicrypt-product-shot">
+          <img src="assets/unicrypt-founders-prototype.png" alt="Concept rendering of the UniCrypt founders prototype with an offline status display and removable physical key" />
+          <figcaption><strong>$180</strong><span>founders prototype target<br />final configuration and pricing subject to validation</span></figcaption>
+        </figure>
+      </section>
+
+      <section class="unicrypt-thesis">
+        <p class="section-number">01 / THE IDEA</p>
+        <h2>Move sensitive file operations away from the general-purpose computer.</h2>
+        <div class="thesis-grid">
+          <p>UniCrypt creates its own local Wi-Fi network and serves a browser interface at a private address. No desktop application is installed, and the prototype does not require an internet connection.</p>
+          <p>The ESP32-C6 streams compression and AES-256-GCM authenticated encryption to microSD. A separate Digispark/ATtiny85 component contributes the physical secret used to derive vault keys.</p>
+        </div>
+      </section>
+
+      <section class="architecture" id="architecture">
+        <p class="section-number">02 / PROTOTYPE ARCHITECTURE</p>
+        <div class="architecture-grid">
+          <article><b>ESP32-C6</b><h3>Local compute</h3><p>Private Wi-Fi access point, browser UI, streaming DEFLATE, AES-256-GCM, randomness, hashing, and storage control.</p></article>
+          <article><b>Physical key</b><h3>Separated secret</h3><p>The removable ATtiny85 prototype carries EEPROM secret material used in per-vault key derivation.</p></article>
+          <article><b>microSD</b><h3>Portable storage</h3><p>Stores originals when requested, encrypted/compressed outputs, restored files, and operation logs without keys or contents.</p></article>
+          <article><b>Browser</b><h3>No installed client</h3><p>Files move in bounded sequential chunks through a local-only interface, avoiding whole-file buffering on constrained hardware.</p></article>
+        </div>
+      </section>
+
+      <section class="security-reality">
+        <div><p class="section-number">03 / SECURITY REALITY</p><h2>Clear threat models before confident claims.</h2></div>
+        <div>
+          <p>AES-256-GCM can detect ciphertext alteration, and each encrypted file uses a fresh salt and nonce. The planned device does not overwrite source files.</p>
+          <p>The founders prototype is not a certified security product. The ATtiny85 is not a secure element, physical extraction is outside the current threat model, and losing or reprovisioning the hardware key can make encrypted files unrecoverable.</p>
+        </div>
+      </section>
+
+      <section class="funding" id="funding">
+        <div class="funding-copy">
+          <p class="section-number">04 / SEED DEVELOPMENT</p>
+          <h2>Fund the path from working architecture to auditable pilot hardware.</h2>
+          <p>UniCrypt gives Tethered Unicorn Labs a tangible hardware complement to Unicorn Forge: one product coordinates private intelligence, while the other explores private handling of sensitive files.</p>
+        </div>
+        <div class="funding-grid">
+          <article><span>01</span><strong>Hardware revision</strong><p>Finalize board selection, power delivery, enclosure, storage, physical-key interface, and a secure-element migration path.</p></article>
+          <article><span>02</span><strong>Firmware hardening</strong><p>Failure recovery, authenticated file format, key lifecycle, reproducible builds, dependency review, and destructive-test coverage.</p></article>
+          <article><span>03</span><strong>Security validation</strong><p>Independent design review, attack-surface testing, documented limitations, recovery guidance, and pilot threat modeling.</p></article>
+          <article><span>04</span><strong>Pilot readiness</strong><p>Small-batch prototypes, manufacturing estimates, user testing, accessibility, legal review, packaging, and support documentation.</p></article>
+        </div>
+        <div class="funding-cta"><div><strong>Seed conversations are open.</strong><span>Prototype evidence, architecture notes, and milestone planning are available privately.</span></div><a class="button" href="contact.html?topic=investor">Talk with The Unicorn</a></div>
+      </section>
+
+      <section class="unicrypt-disclosure">
+        <h3>Important disclosure</h3>
+        <p>This page describes an experimental founders prototype and forward-looking development plans. Product design, component selection, security properties, pricing, timelines, and commercial availability may change after engineering and independent review. Nothing here is an offer to sell securities or a guarantee of performance.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-brand"><img src="assets/unicorn-logo.png" alt="" /><span><strong>Tethered Unicorn Labs</strong><small>UniCrypt and Unicorn Forge</small></span></div>
+      <div class="footer-links"><a href="index.html">The Lab</a><a href="forge.html">Unicorn Forge</a><a href="contact.html">Contact</a><a href="#main">Back to top ↑</a></div>
+      <p class="legal">© <span id="year">2026</span> Tethered Unicorn Labs. UniCrypt is an experimental founders prototype.</p>
+    </footer>
+    <script src="site.js"></script>
+  </body>
+</html>

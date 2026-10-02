@@ -1,0 +1,48 @@
+.unicrypt-page { background: #0b0711; color: #f8f5ff; }
+.unicrypt-page .site-header { background: #0b0711eb; border-color: #ffffff1c; }
+.unicrypt-page .brand strong { color: #fff; }
+.unicrypt-page .brand small { color: #be77ff; }
+.unicrypt-page .site-header nav a { color: #ede9f4; }
+.unicrypt-page .site-header .nav-cta { background: linear-gradient(120deg,#ad67ef,#43d1ed); color: #08050d; box-shadow: 4px 4px 0 #654d75; }
+.unicrypt-page main > section { width: min(1180px,calc(100% - 48px)); margin: auto; border-color: #ffffff18; }
+.unicrypt-page .eyebrow,.unicrypt-page .section-number { color: #58d9f4; }
+.unicrypt-page h1,.unicrypt-page h2 { color: #fff; }
+.unicrypt-page h1 em { color: #bf76ff; text-decoration-color: #6e3e8e; }
+.unicrypt-page .lede { color: #c6bfd0; }
+.unicrypt-page .button { border-color: #bc74fa; background: linear-gradient(120deg,#b968f1,#48cde9); color: #0a0610; }
+.unicrypt-page .button.secondary { border-color: #ffffff42; background: transparent; color: #fff; }
+.unicrypt-hero { min-height: calc(100vh - 86px); display: grid; grid-template-columns: 1.05fr .95fr; gap: 70px; align-items: center; padding: 80px 0 100px !important; }
+.unicrypt-hero h1 { font-size: clamp(3.5rem,6.5vw,6.8rem); }
+.prototype-note { color: #8e8799; font-size: .78rem; }
+.unicrypt-product-shot { margin: 0; }
+.unicrypt-product-shot img { display: block; width: min(100%,540px); margin: auto; border: 1px solid #ffffff20; border-radius: 30px; box-shadow: 0 45px 120px #000a,18px 18px 0 #4d2f635c; }
+.unicrypt-product-shot figcaption { display: flex; justify-content: center; align-items: baseline; gap: 14px; margin-top: 20px; }
+.unicrypt-product-shot figcaption strong { font: 400 3.2rem var(--serif); color: #bf76ff; }
+.unicrypt-product-shot figcaption span { color: #7e7889; font-size: .67rem; letter-spacing: .07em; text-transform: uppercase; }
+.unicrypt-thesis h2 { max-width: 950px; }
+.thesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; margin-left: 18%; color: #beb8c8; font-size: 1.08rem; }
+.architecture-grid,.funding-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 42px; background: #ffffff18; }
+.architecture-grid article,.funding-grid article { min-height: 250px; padding: 30px; background: #10101a; }
+.architecture-grid b,.funding-grid span { color: #56d5ef; font-size: .72rem; letter-spacing: .1em; }
+.architecture-grid h3 { margin: 55px 0 12px; font: 400 1.8rem var(--serif); }
+.architecture-grid p,.funding-grid p { color: #9690a1; }
+.security-reality { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.security-reality > div:last-child { color: #bbb4c5; font-size: 1.06rem; padding-top: 45px; }
+.funding { width: 100% !important; max-width: none !important; padding-left: max(24px,calc((100vw - 1180px)/2)) !important; padding-right: max(24px,calc((100vw - 1180px)/2)) !important; background: radial-gradient(circle at 90% 15%,#2d7b9145,transparent 30rem),linear-gradient(140deg,#180d25,#0a1720); }
+.funding-copy { display: grid; grid-template-columns: .7fr 1.3fr; gap: 55px; align-items: start; }
+.funding-copy .section-number { grid-column: 1 / -1; }
+.funding-copy p:last-child { color: #aaa4b5; }
+.funding-grid article strong { display: block; margin: 55px 0 10px; font: 400 1.55rem var(--serif); }
+.funding-cta { display: flex; justify-content: space-between; gap: 24px; align-items: center; margin-top: 38px; padding: 28px; border: 1px solid #ffffff24; border-radius: 20px; background: #ffffff0b; }
+.funding-cta div { display: grid; gap: 4px; }
+.funding-cta span { color: #9690a1; font-size: .85rem; }
+.unicrypt-disclosure { color: #827b8e; font-size: .82rem; }
+.unicrypt-disclosure h3 { color: #d3ccd9; }
+.unicrypt-page footer { background: #08050d; color: #eee; }
+.unicrypt-page .legal { color: #777180; border-color: #ffffff17; }
+@media (max-width: 900px) {
+  .unicrypt-hero,.thesis-grid,.security-reality,.funding-copy { grid-template-columns: 1fr; margin-left: 0; gap: 30px; }
+  .unicrypt-product-shot { grid-row: 1; }
+  .architecture-grid,.funding-grid { grid-template-columns: 1fr; }
+  .funding-cta { align-items: stretch; flex-direction: column; }
+}
