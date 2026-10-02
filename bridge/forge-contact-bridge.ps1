@@ -45,6 +45,28 @@ try {
 
 $acknowledged = [Collections.Generic.List[string]]::new()
 $deliveryError = $null
+$fieldDelivered = 0
+foreach ($item in @($inbox.accessRequests)) {
+  $fieldPayload = @{
+    name = [string]$item.name
+    email = [string]$item.email
+    phone = [string]$item.phone
+    username = [string]$item.username
+    reason = [string]$item.reason
+    deliveryMethod = 'private'
+    ageConfirmed = [bool]$item.ageConfirmed
+    onboarding = $item.onboarding
+    feedback = $item.feedback
+  } | ConvertTo-Json -Depth 8
+  try {
+    Invoke-RestMethod -Uri 'http://127.0.0.1:3211/api/field/access-request' -Method Post -ContentType 'application/json' -Body $fieldPayload -TimeoutSec 20 | Out-Null
+    $acknowledged.Add([string]$item.key)
+    $fieldDelivered++
+  } catch {
+    $deliveryError = "Forge field API unavailable: $($_.Exception.Message)"
+    break
+  }
+}
 foreach ($item in @($inbox.messages)) {
   $body = @(
     "Reference: $($item.reference)",
@@ -76,9 +98,9 @@ if ($acknowledged.Count) {
   try { Invoke-RestMethod -Uri "$($bridge.endpoint)/forge/ack" -Headers $forgeHeaders -Method Post -ContentType 'application/json' -Body $ackBody -TimeoutSec 20 | Out-Null } catch {}
 }
 
-$fetchedCount = @($inbox.messages).Count
+$fetchedCount = @($inbox.messages).Count + @($inbox.accessRequests).Count
 if ($deliveryError) {
-  Write-BridgeStatus -State 'ntfy-unavailable' -Detail $deliveryError -Fetched $fetchedCount -Delivered $acknowledged.Count
+  Write-BridgeStatus -State 'delivery-unavailable' -Detail $deliveryError -Fetched $fetchedCount -Delivered $acknowledged.Count
 } else {
-  Write-BridgeStatus -State 'healthy' -Detail 'Website inbox checked and available messages relayed.' -Fetched $fetchedCount -Delivered $acknowledged.Count
+  Write-BridgeStatus -State 'healthy' -Detail "Website inbox checked; $fieldDelivered field request(s) and $($acknowledged.Count - $fieldDelivered) message(s) relayed." -Fetched $fetchedCount -Delivered $acknowledged.Count
 }

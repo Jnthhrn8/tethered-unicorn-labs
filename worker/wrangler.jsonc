@@ -10,7 +10,8 @@
 		}
 	],
 	"vars": {
-		"ALLOWED_ORIGIN": "https://tetheredunicorn.com"
+		"ALLOWED_ORIGIN": "https://tetheredunicorn.com",
+		"FIELD_CONSOLE_ORIGIN": "https://jnthhrn8.github.io"
 	},
 	"kv_namespaces": [
 		{

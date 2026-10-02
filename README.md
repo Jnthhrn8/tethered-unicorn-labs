@@ -42,6 +42,8 @@ The public form posts to a separate Cloudflare Worker at `messages.tetheredunico
 
 The scheduled bridge uses `forge-contact-bridge.vbs` so polling remains completely hidden. Its latest health result is written to `%LOCALAPPDATA%\HermesCommandCenter\contact-bridge\bridge-status.json`; credentials are never written to that status file.
 
+The field-test portal posts completed 18+ access applications to the Worker's `/field-request` route. Those structured applications remain queued while Forge is offline. The bridge relays them to the loopback-only field API, which creates the pending owner-console record and publishes the private ntfy alert.
+
 Required Worker secret:
 
 - `FORGE_INBOX_TOKEN`

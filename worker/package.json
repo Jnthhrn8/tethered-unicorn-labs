@@ -1,8 +1,10 @@
 {
   "name": "tethered-unicorn-contact-worker",
   "private": true,
+  "type": "module",
   "scripts": {
     "deploy": "wrangler deploy",
+    "test": "node --test test",
     "whoami": "wrangler whoami"
   },
   "devDependencies": {
