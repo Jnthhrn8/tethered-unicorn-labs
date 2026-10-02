@@ -1,0 +1,11 @@
+{
+  "name": "tethered-unicorn-contact-worker",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "whoami": "wrangler whoami"
+  },
+  "devDependencies": {
+    "wrangler": "^4.146.0"
+  }
+}

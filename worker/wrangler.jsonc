@@ -1,0 +1,21 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "tethered-unicorn-contact",
+	"main": "src/contact-worker.js",
+	"compatibility_date": "2026-10-02",
+	"routes": [
+		{
+			"pattern": "messages.tetheredunicorn.com",
+			"custom_domain": true
+		}
+	],
+	"vars": {
+		"ALLOWED_ORIGIN": "https://tetheredunicorn.com"
+	},
+	"kv_namespaces": [
+		{
+			"binding": "CONTACT_QUEUE",
+			"id": "fea5b2745431471ba5aed4b6867befea"
+		}
+	]
+}

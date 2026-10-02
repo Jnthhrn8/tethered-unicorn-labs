@@ -1,3 +1,8 @@
 preview*.png
 preview-site.cjs
-
+worker/node_modules/
+worker/.wrangler/
+worker/src/index.js
+worker/pnpm-lock.yaml
+worker/pnpm-workspace.yaml
+*.log
