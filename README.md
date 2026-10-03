@@ -40,9 +40,11 @@ The canonical domain is `tetheredunicorn.com`. The included `CNAME` file support
 
 ## Contact Worker
 
-The public form posts to a separate Cloudflare Worker at `messages.tetheredunicorn.com`. The Worker validates and rate-limits submissions, then holds them in a 30-day queue. An outbound-only local bridge retrieves queued messages and publishes them into the Forge's private ntfy alert channel. This avoids exposing a Tailscale service or ntfy credential to the public internet.
+Public contact uses direct email, text, phone, and WhatsApp links on `contact.html`; it does not use Workers KV. The old `/contact` Worker endpoint returns HTTP 410 and performs no KV operations. The separate field-test application still posts structured entrance answers to the Worker at `messages.tetheredunicorn.com`, which holds them in a 30-day queue for the private Forge bridge. This avoids exposing a Tailscale service or ntfy credential to the public internet.
 
 The scheduled bridge uses `forge-contact-bridge.vbs` so polling remains completely hidden. Its latest health result is written to `%LOCALAPPDATA%\HermesCommandCenter\contact-bridge\bridge-status.json`; credentials are never written to that status file.
+
+The `UnicornForge Website Contact Bridge` Windows task must repeat **every three hours** (eight checks/day), not every minute. Each inbox check currently makes two Workers KV list requests (one contact queue and one field-request queue), even when both are empty. A one-minute schedule consumes roughly 2,880 list requests/day per computer; the three-hour schedule uses about 16/day, with up to a three-hour delivery delay. Keep only one bridge task active for this queue when possible, and use the status file to confirm the most recent check. Do not shorten the interval without rechecking the current [Workers KV list allowance](https://developers.cloudflare.com/kv/platform/pricing/).
 
 The field-test portal posts completed 18+ access applications to the Worker's `/field-request` route. Those structured applications remain queued while Forge is offline. The bridge relays them to the loopback-only field API, which creates the pending owner-console record and publishes the private ntfy alert.
 

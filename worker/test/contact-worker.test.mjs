@@ -95,3 +95,14 @@ test('unapproved web origins cannot submit field requests', async () => {
   const response = await worker.fetch(post('https://example.invalid'), env());
   assert.equal(response.status, 403);
 });
+
+test('retired public contact endpoint does not touch Workers KV', async () => {
+  const state = env();
+  state.CONTACT_QUEUE.get = () => { throw new Error('Unexpected KV read'); };
+  state.CONTACT_QUEUE.put = () => { throw new Error('Unexpected KV write'); };
+  const response = await worker.fetch(new Request('https://messages.tetheredunicorn.com/contact', {
+    method: 'POST', headers: { Origin: state.ALLOWED_ORIGIN, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: 'Test', email: 'test@example.test', topic: 'general', message: 'Hello', consent: true }),
+  }), state);
+  assert.equal(response.status, 410);
+});

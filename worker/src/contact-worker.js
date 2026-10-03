@@ -133,8 +133,7 @@ export default {
     const headers = cors(origin, env);
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers });
     if (request.method === 'POST' && url.pathname === '/contact') {
-      if (!allowedOrigins(env).has(origin)) return json({ error: 'Origin not allowed.' }, 403, headers);
-      return acceptContact(request, env, headers);
+      return json({ error: 'The website form has moved. Use the direct email, text, call, or WhatsApp links on the contact page.' }, 410, headers);
     }
     if (request.method === 'POST' && url.pathname === '/field-request') {
       if (!allowedOrigins(env).has(origin)) return json({ error: 'Origin not allowed.' }, 403, headers);
