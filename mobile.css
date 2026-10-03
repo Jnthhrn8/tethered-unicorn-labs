@@ -1,0 +1,56 @@
+/* Homepage layout repair and mobile refinement. Loaded after the core and playful styles. */
+.sparkles{position:absolute;inset:0;pointer-events:none}
+.hero-copy,.hero-mark{min-width:0}
+.eyebrow{max-width:100%;overflow-wrap:anywhere}
+.hero-copy>.eyebrow{display:flex;flex-wrap:wrap;gap:0 .65em}
+.hero-copy>.eyebrow span{flex:0 0 auto;white-space:nowrap}
+
+@media(max-width:900px){
+  .site-header{height:auto;min-height:72px;padding:10px 20px}
+  .menu-button{min-height:44px}
+  .hero{gap:44px;min-height:auto;padding:64px max(24px,6vw) 72px}
+  .hero-mark img{width:min(82vw,390px);max-width:100%}
+  .orbit-one{width:min(92vw,470px);height:min(92vw,470px)}
+  .orbit-two{width:min(70vw,340px);height:min(95vw,470px)}
+  main>section:not(.hero){width:min(100% - 40px,1240px);padding:90px 0}
+  .forge,.investors{width:100%!important;padding-top:90px!important;padding-bottom:90px!important}
+}
+
+@media(max-width:520px){
+  body{font-size:15px}
+  .site-header{padding:9px 14px}
+  .brand{gap:9px;min-width:0}
+  .brand img{width:44px;height:44px;border-radius:14px}
+  .brand strong{font-size:.61rem;letter-spacing:.1em}
+  .brand small{font-size:.56rem;letter-spacing:.32em}
+  .menu-button{padding:7px 12px}
+  .hero{gap:36px;padding:42px 18px 58px}
+  .hero-copy,.hero-mark{width:calc(100vw - 36px);max-width:calc(100vw - 36px)}
+  .hero-copy>.eyebrow{display:block;width:100%;max-width:100%;line-height:1.65}
+  .hero-copy>.eyebrow span{display:block;white-space:normal}
+  .hero h1{font-size:clamp(2.85rem,15vw,3.7rem);line-height:.88;margin:19px 0 27px}
+  .eyebrow,.section-number{font-size:.64rem;letter-spacing:.14em}
+  .lede{font-size:1.03rem}
+  .hero-mark img{width:min(84vw,330px);border-radius:32% 46% 40% 43%;box-shadow:12px 14px 0 var(--pink),-10px -10px 0 var(--yellow),0 28px 55px #6f517230}
+  .orbit{border-width:2px}
+  .actions{display:grid;grid-template-columns:1fr;gap:10px}
+  .button{width:100%;min-height:48px;padding-inline:16px}
+  main>section:not(.hero){width:calc(100% - 28px);padding:70px 0}
+  h2{font-size:clamp(2.25rem,12vw,3.2rem)}
+  .manifesto-grid{gap:20px;font-size:1.02rem}
+  .forge,.investors{padding:70px 18px!important}
+  .capability-grid article{min-height:0;padding:25px}
+  .capability-grid h3{margin-top:32px}
+  .principle-list article{padding:22px 0}
+  .company-copy{padding-top:0}
+  .footer-links{gap:16px}
+  .legal{margin-top:44px}
+}
+
+@media(max-width:360px){
+  .brand span{max-width:155px}
+  .hero h1{font-size:2.75rem}
+  .hero{padding-inline:14px}
+  main>section:not(.hero){width:calc(100% - 24px)}
+  .forge,.investors{padding-left:14px!important;padding-right:14px!important}
+}
