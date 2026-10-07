@@ -1,0 +1,12 @@
+{
+  "$schema": "../worker/node_modules/wrangler/config-schema.json",
+  "name": "unicorn-forge-availability",
+  "main": "worker.mjs",
+  "account_id": "2cdc18dd668645ce861034681bcd2214",
+  "compatibility_date": "2026-10-07",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{"pattern": "forge.tetheredunicorn.com/*", "zone_id": "df54a34170d054163c56e99b3e14d243"}],
+  "rules": [{"type": "Text", "globs": ["**/*.html"], "fallthrough": true}],
+  "observability": {"enabled": true, "head_sampling_rate": 0.1}
+}

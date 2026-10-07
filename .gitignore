@@ -6,3 +6,4 @@ worker/pnpm-lock.yaml
 worker/pnpm-workspace.yaml
 *.log
 preview-output/
+.wrangler/
