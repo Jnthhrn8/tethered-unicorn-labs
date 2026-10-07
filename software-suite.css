@@ -1,0 +1,10 @@
+.tracewell-feature{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.tracewell-copy>p:not(.section-number):not(.product-label){color:var(--muted)}
+.tracewell-copy .product-label{margin-top:32px;color:#655076}
+.tracewell-copy li{margin:12px 0}
+.tracewell-brand{margin:0;padding:30px;border-radius:32px;background:linear-gradient(145deg,#e4f4ee,#eee5fa);text-align:center}
+.tracewell-brand img{width:100%;height:auto;max-width:360px;object-fit:contain}
+.tracewell-brand figcaption{margin-top:18px;font-size:.9rem;color:#51425f}
+.product-stage{font-size:.85rem}
+.investors .inline-link{color:#6d255c;border-bottom-color:#6d255c}
+@media(max-width:900px){.tracewell-feature{grid-template-columns:1fr;gap:32px}.tracewell-brand{max-width:460px;width:100%}}

@@ -13,4 +13,13 @@ navigation?.addEventListener('click', (event) => {
   }
 });
 
-document.querySelector('#year').textContent = String(new Date().getFullYear());
+navigation?.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    navigation.classList.remove('open');
+    menuButton?.setAttribute('aria-expanded', 'false');
+    menuButton?.focus();
+  }
+});
+
+const year = document.querySelector('#year');
+if (year) year.textContent = String(new Date().getFullYear());

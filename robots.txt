@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tetheredunicorn.com/sitemap.xml

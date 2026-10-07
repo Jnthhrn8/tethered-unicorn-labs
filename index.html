@@ -4,28 +4,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f7d9f1" />
-    <meta name="description" content="Tethered Unicorn Labs makes personalized software and AI-driven hardware attainable, useful, and a little more playful." />
-    <meta property="og:title" content="Tethered Unicorn Labs" />
-    <meta property="og:description" content="Serious intelligence—with a dash of magic." />
-    <meta property="og:image" content="assets/unicorn-logo.png" />
+    <meta name="description" content="Tethered Unicorn Labs is building Unicorn Forge and TraceWell: AI automation and evidence-based research software, with hosted services in development." />
     <title>Tethered Unicorn Labs · Serious intelligence, a dash of magic</title>
-    <link rel="icon" type="image/png" href="assets/unicorn-logo.png" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="labs.css" />
     <link rel="stylesheet" href="playful.css" />
-    <link rel="stylesheet" href="unicrypt-feature.css" />
+    <link rel="stylesheet" href="software-suite.css" />
     <link rel="stylesheet" href="mobile.css" />
-  </head>
+  <link rel="canonical" href="https://tetheredunicorn.com/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Tethered Unicorn Labs">
+<meta property="og:title" content="Tethered Unicorn Labs · Serious intelligence, a dash of magic"><meta property="og:description" content="Tethered Unicorn Labs is building Unicorn Forge and TraceWell: AI automation and evidence-based research software, with hosted services in development.">
+<meta property="og:url" content="https://tetheredunicorn.com/"><meta property="og:image" content="https://tetheredunicorn.com/assets/social-labs.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Tethered Unicorn Labs · Serious intelligence, a dash of magic">
+<meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="accessibility.css">
+</head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Tethered Unicorn Labs home">
-        <img src="assets/unicorn-logo.png" alt="" />
+        <img width="1200" height="1200" decoding="async" src="assets/unicorn-logo.webp" alt="" />
         <span><strong>TETHERED UNICORN</strong><small>LABS</small></span>
       </a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" aria-label="Primary navigation">
         <a href="forge.html">Unicorn Forge</a>
-        <a href="unicrypt.html">UniCrypt</a>
+        <a href="#tracewell">TraceWell</a>
         <a href="#principles">Principles</a>
         <a href="#company">Company</a>
         <a href="#investors">Investors</a>
@@ -34,17 +37,17 @@
       </nav>
     </header>
 
-    <main id="main">
+    <main id="main" tabindex="-1">
       <section class="hero" id="top">
         <div class="rainbow rainbow-one" aria-hidden="true"></div>
         <div class="rainbow rainbow-two" aria-hidden="true"></div>
         <div class="sparkles" aria-hidden="true"><i>✦</i><i>✧</i><i>★</i><i>✦</i><i>✧</i><i>★</i></div>
         <div class="hero-copy">
-          <p class="eyebrow"><span>PERSONAL SOFTWARE ·</span><span>SMART HARDWARE ·</span><span>HUMAN DIRECTION</span></p>
+          <p class="eyebrow"><span>AI SOFTWARE ·</span><span>HOSTED SERVICES ·</span><span>HUMAN DIRECTION</span></p>
           <h1>Serious<br />intelligence.<br /><em>With a dash of magic.</em></h1>
-          <p class="lede">Tethered Unicorn Labs creates personalized software and AI-driven hardware that fits real people and real work. We want custom technology to be attainable—not reserved for giant companies—and electronics to feel useful, understandable, and genuinely fun.</p>
+          <p class="lede">Tethered Unicorn Labs builds software that helps people turn questions into research and ideas into completed work. Unicorn Forge brings AI agents, tools, and project context together. TraceWell turns public-source research into organized, reviewable evidence. Our next step is hosted software that makes those capabilities easier to access.</p>
           <div class="actions">
-            <a class="button" href="forge.html">Step inside Unicorn Forge</a>
+            <a class="button" href="#forge">Explore the software suite</a>
             <a class="button secondary" href="contact.html">Start a conversation</a>
           </div>
         </div>
@@ -52,14 +55,14 @@
           <div class="orbit orbit-one"></div>
           <div class="orbit orbit-two"></div>
           <aside class="idea-console">
-            <span>FROM THE LAB BENCH</span>
-            <strong>AI + hardware + you</strong>
-            <small>Custom systems should feel personal—not generic.</small>
+            <span>FROM QUESTION TO OUTCOME</span>
+            <strong>Research. Automate. Create.</strong>
+            <small>Software that works with your context and your goals.</small>
             <div class="mini-circuit" aria-hidden="true"><i></i><i></i><i></i><b>✦</b></div>
           </aside>
-          <img src="assets/unicorn-logo.png" alt="Tethered Unicorn Labs black and gold unicorn emblem" />
+          <img width="1200" height="1200" decoding="async" src="assets/unicorn-logo.webp" alt="Tethered Unicorn Labs black and gold unicorn emblem" />
         </div>
-        <div class="hero-status"><span></span> Building in private pre-alpha</div>
+        <div class="hero-status"><span></span> Software in pre-alpha · Hosted services in development</div>
       </section>
 
       <section class="manifesto">
@@ -67,51 +70,53 @@
         <h2>Technology should feel made for you—not handed down to you.</h2>
         <div class="manifesto-grid">
           <p>We believe the next generation of personal computing will be adaptive, model-flexible, and capable of meaningful action. Software should learn the individual or company it serves while preserving agency and showing its work.</p>
-          <p>We pair that intelligence with approachable electronics: private devices, playful interfaces, and hardware that turns an idea into something people can hold, understand, and enjoy.</p>
+          <p>Our focus is software as a service: useful applications delivered and operated by Tethered Unicorn Labs. Customers should be able to focus on their work while we manage the service, improve the product, and make its capabilities easier to use.</p>
         </div>
       </section>
 
       <section class="forge" id="forge">
         <div class="forge-intro">
-          <p class="section-number">02 / AI PLATFORM</p>
+          <p class="section-number">02 / SOFTWARE SUITE · AUTOMATION</p>
           <p class="product-label">INTRODUCING</p>
           <h2>Unicorn Forge</h2>
-          <p>A local-first AI command center—and a foundation for personalized software—designed to do the work, not merely describe it.</p>
+          <p>An AI workspace for coordinating models, agents, tools, and project knowledge. Forge is designed to plan tasks, act through connected tools, and make results available for review.</p>
           <a class="inline-link" href="forge.html">Explore the dedicated Forge page <span>→</span></a>
         </div>
         <div class="capability-grid">
           <article><span>01</span><h3>Model freedom</h3><p>Choose the right local or connected model for each task instead of being locked to one provider.</p></article>
           <article><span>02</span><h3>Observable action</h3><p>See commands, tool results, failures, approvals, and verification while agents work.</p></article>
           <article><span>03</span><h3>Personal context</h3><p>Organize projects, files, conversations, skills, and approved memories around the individual.</p></article>
-          <article><span>04</span><h3>Cooperative compute</h3><p>Coordinate suitable work across trusted computers while the owner stays in control.</p></article>
+          <article><span>04</span><h3>Connected workflows</h3><p>Bring research, writing, development, and repeatable tasks into one workspace with visible progress and reviewable results.</p></article>
         </div>
       </section>
 
-      <section class="unicrypt-feature" id="unicrypt">
-        <div class="unicrypt-visual">
-          <img src="assets/unicrypt-founders-prototype.png" alt="UniCrypt founders prototype concept showing the offline encryption appliance and removable hardware key" />
-        </div>
-        <div class="unicrypt-copy">
-          <p class="section-number">03 / FLAGSHIP HARDWARE</p>
-          <p class="product-label">FOUNDERS PROTOTYPE</p>
-          <h2>UniCrypt</h2>
-          <p>A self-contained compression and encryption appliance designed to keep the master key off the computer and operate without cloud services or installed desktop software.</p>
+      <section class="tracewell-feature" id="tracewell">
+        <div class="tracewell-copy">
+          <p class="section-number">03 / SOFTWARE SUITE · RESEARCH</p>
+          <p class="product-label">INTRODUCING</p>
+          <h2>TraceWell</h2>
+          <p class="lede">Start with what you know. Build a clearer picture.</p>
+          <p>A conversational workspace for open-source intelligence: research using publicly available information. TraceWell helps refine a question, gather sources, and organize findings into a case you can review.</p>
           <ul>
-            <li>Local-only browser interface over the device’s private Wi-Fi</li>
-            <li>Streaming AES-256-GCM encryption and DEFLATE compression</li>
-            <li>microSD storage with a separate physical hardware key</li>
+            <li>Natural-language queries and follow-up questions that sharpen the research</li>
+            <li>Public-source search, page capture, and source review</li>
+            <li>Organized case folders with reports and supporting evidence</li>
           </ul>
-          <div class="unicrypt-price"><strong>$180</strong><span>founders prototype target · final pricing subject to validation</span></div>
-          <a class="button" href="unicrypt.html">Explore UniCrypt</a>
+          <p class="product-stage">Early testing · Findings are research leads for human review.</p>
+          <div class="actions"><a class="button" href="https://tracewell.tetheredunicorn.com/">Open TraceWell</a><a class="button secondary" href="contact.html?topic=tracewell">Ask about early access</a></div>
         </div>
+        <figure class="tracewell-brand">
+          <img src="assets/tracewell-logo.png" width="512" height="512" loading="lazy" alt="TraceWell pastel detective unicorn with a hat, monocle, and pipe" />
+          <figcaption>Better questions. Traceable sources. Clearer findings.</figcaption>
+        </figure>
       </section>
 
       <section class="principles" id="principles">
         <p class="section-number">04 / OUR PRINCIPLES</p>
         <div class="principle-list">
-          <article><b>Private by design</b><p>Local capability and deliberate data boundaries should be defaults, not premium upgrades.</p></article>
+          <article><b>Clear service boundaries</b><p>Explain where processing happens, how information is used, and what users can control. Hosting is a delivery model; responsible handling of data is a product obligation.</p></article>
           <article><b>Evidence over theater</b><p>An agent should verify what happened and admit what did not—not simply announce success.</p></article>
-          <article><b>Play is useful</b><p>Friendly color, tactile hardware, and moments of delight can make difficult technology easier to understand and explore.</p></article>
+          <article><b>Play is useful</b><p>Friendly interfaces, thoughtful interactions, and moments of delight can make difficult technology easier to understand and explore.</p></article>
           <article><b>Human-governed autonomy</b><p>Powerful automation needs visible activity, scoped permissions, interruption, and recovery.</p></article>
         </div>
       </section>
@@ -122,8 +127,8 @@
           <h2>Built for a more capable—and more human—future.</h2>
         </div>
         <div class="company-copy">
-          <p>Tethered Unicorn Labs is an early-stage product company building AI-driven hardware, personalized software, reliable agents, private compute, and adaptive interfaces for individuals and organizations.</p>
-          <p>We are beginning with Unicorn Forge and UniCrypt, but the larger mission is to make custom technology attainable for more people. The work is ambitious; the method stays grounded in useful prototypes, responsible experimentation, continuous verification—and just enough playfulness to invite curiosity.</p>
+          <p>Tethered Unicorn Labs is an early-stage software company developing AI applications for individuals and organizations. Our focus is useful automation, conversational research, and hosted services that reduce the work required to get value from AI.</p>
+          <p>Unicorn Forge and TraceWell lead our software suite. We are developing a SaaS offering operated by Tethered Unicorn Labs, with subscription packaging and service capacity still to be validated. <a href="unicrypt.html">UniCrypt</a> continues as a complementary hardware research project.</p>
         </div>
       </section>
 
@@ -131,7 +136,7 @@
         <div>
           <p class="section-number">06 / INVESTORS &amp; COLLABORATORS</p>
           <h2>Help make custom technology feel personal again.</h2>
-          <p>Our early seed conversation supports two complementary product tracks: hardening Unicorn Forge’s personalized agent workspace and advancing UniCrypt from founders prototype toward an auditable pilot device. Funding priorities include dedicated compute, product and hardware engineering, security validation, legal foundations, field testing, and focused research and development.</p>
+          <p>Our early seed conversation focuses on bringing Unicorn Forge and TraceWell toward dependable hosted services. Priorities include software engineering, onboarding, service reliability, research quality, customer support, and testing which workflows earn repeat use. Infrastructure supports the software; the customer value is what the applications help people accomplish.</p>
         </div>
         <div class="investor-actions">
           <a class="button light" href="investors.html">View the investor overview</a>
@@ -142,10 +147,10 @@
     </main>
 
     <footer>
-      <div class="footer-brand"><img src="assets/unicorn-logo.png" alt="" /><span><strong>Tethered Unicorn Labs</strong><small>Personal software. Playful hardware. Practical magic.</small></span></div>
-      <div class="footer-links"><a href="forge.html">Unicorn Forge</a><a href="unicrypt.html">UniCrypt</a><a href="contact.html">Contact</a><a href="partners.html">Sponsors &amp; affiliates</a><a href="#top">Back to top ↑</a></div>
+      <div class="footer-brand"><img width="1200" height="1200" decoding="async" src="assets/unicorn-logo.webp" alt="" /><span><strong>Tethered Unicorn Labs</strong><small>Capable software. Useful services. Practical magic.</small></span></div>
+      <div class="footer-links"><a href="forge.html">Unicorn Forge</a><a href="#tracewell">TraceWell</a><a href="contact.html">Contact</a><a href="partners.html">Sponsors &amp; affiliates</a><a href="#top">Back to top ↑</a></div>
       <p class="legal">© <span id="year">2026</span> Tethered Unicorn Labs. Currently an early-stage project; company formation and trademark clearance are in progress.</p>
-    </footer>
+    <nav class="policy-links" aria-label="Website policies"><a href="privacy.html">Privacy</a><a href="terms.html">Website terms</a><a href="accessibility.html">Accessibility</a></nav></footer>
     <script src="site.js"></script>
   </body>
 </html>

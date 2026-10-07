@@ -8,10 +8,12 @@ Public company website for **Tethered Unicorn Labs**, a product lab making perso
 - `forge.html` — dedicated black-and-gold Unicorn Forge product page;
 - `unicrypt.html` — dedicated UniCrypt founders-prototype page;
 - `investors.html` — early investor overview and funding cases;
-- `contact.html` — direct contact form plus deliberately selected email and phone links;
+- `contact.html` — direct email, text, phone, and WhatsApp links;
 - `partners.html` — colorful collaboration, sponsorship, and affiliate-partnership information.
 
 ## Boundaries
+
+The company positioning leads with Unicorn Forge and TraceWell, software capabilities, and planned hosted SaaS services. UniCrypt is a complementary hardware research project. Hosted subscriptions and service capacity remain under validation; the original funding scenarios need reconciliation with the SaaS operating budget. Public copy does not describe the owner's authentication method.
 
 This is a public marketing property. It must remain separate from:
 
@@ -27,15 +29,15 @@ Open `index.html` directly, or run a simple static web server in this directory.
 
 ## Domain
 
-The canonical domain is `tetheredunicorn.com`. The included `CNAME` file supports a GitHub Pages deployment. Configure the registrar only after the hosting repository and HTTPS endpoint are ready.
+The canonical domain is `tetheredunicorn.com`. The included `CNAME` file supports a GitHub Pages deployment. HTTPS certificate provisioning was restarted and HTTPS enforcement enabled on October 5, 2026. Both HTTP and www redirect to the canonical HTTPS site.
 
 ## Before launch
 
 - Complete preliminary trademark and entity-name clearance.
 - Replace the provisional company-formation footer once the legal entity exists.
-- Add reviewed privacy, terms, accessibility, and contact pages.
+- Privacy, website terms, accessibility, and contact pages are present. Public policies cover the marketing site only; independent legal and accessibility review remains outstanding.
 - [ ] Verify end-to-end delivery for `theunicorn@tetheredunicorn.com`; routing is configured but receipt is not yet proven.
-- Optimize the PNG brand asset and add social-card variants.
+- WebP delivery assets, a small favicon, and three 1200 × 630 social cards are included; original PNG artwork is preserved.
 - Test mobile layout, accessibility, links, metadata, and HTTPS.
 
 ## Contact Worker
@@ -53,3 +55,7 @@ Required Worker secret:
 - `FORGE_INBOX_TOKEN`
 
 Deploy from `worker/` with Wrangler after authenticating the Cloudflare account. The browser never receives the inbox token.
+
+## Website verification
+
+Run `node preview-site.cjs` with Playwright available to start an ephemeral loopback preview, check all public pages at desktop and mobile widths, and generate ignored screenshots. `PREVIEW_BASE_URL` can point to the deployed site. Results do not establish full accessibility conformance.
