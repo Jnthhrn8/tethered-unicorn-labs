@@ -13,7 +13,7 @@ Public company website for **Tethered Unicorn Labs**, a product lab making perso
 
 ## Boundaries
 
-The company positioning leads with Unicorn Forge and TraceWell, software capabilities, and planned hosted SaaS services. UniCrypt is a complementary hardware research project. Hosted subscriptions and service capacity remain under validation; the original funding scenarios need reconciliation with the SaaS operating budget. Public copy does not describe the owner's authentication method.
+The company positioning leads with Unicorn Forge and Irideselle Search, software capabilities, and planned hosted SaaS services. UniCrypt is a complementary hardware research project. Hosted subscriptions and service capacity remain under validation; the original funding scenarios need reconciliation with the SaaS operating budget. Public copy does not describe the owner's authentication method.
 
 This is a public marketing property. It must remain separate from:
 
