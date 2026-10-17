@@ -16,6 +16,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="UniCrypt · File compression and encryption">
 <meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="accessibility.css">
 <link rel="stylesheet" href="unicorn-theme.css">
+<link rel="stylesheet" href="suite.css">
 </head>
   <body class="unicrypt-page">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -54,14 +55,14 @@
         <h2>Move sensitive file operations away from the general-purpose computer.</h2>
         <div class="thesis-grid">
           <p>UniCrypt creates its own local Wi-Fi network and serves a browser interface at a private address. No desktop application is installed, and the prototype does not require an internet connection.</p>
-          <p>The ESP32-C6 streams compression and AES-256-GCM authenticated encryption to microSD. The prototype brings these file operations into a dedicated device.</p>
+          <p>The ESP32-S3 streams compression and AES-256-GCM authenticated encryption to microSD. The prototype brings these file operations into a dedicated device.</p>
         </div>
       </section>
 
       <section class="architecture" id="architecture">
         <p class="section-number">02 / PROTOTYPE ARCHITECTURE</p>
         <div class="architecture-grid">
-          <article><b>ESP32-C6</b><h3>Local compute</h3><p>Private Wi-Fi access point, browser UI, streaming DEFLATE, AES-256-GCM, randomness, hashing, and storage control.</p></article>
+          <article><b>ESP32-S3</b><h3>Local compute</h3><p>Private Wi-Fi access point, browser UI, streaming DEFLATE, AES-256-GCM, randomness, hashing, and storage control.</p></article>
           <article><b>File processing</b><h3>Dedicated workflow</h3><p>A purpose-built interface for compressing, encrypting, and restoring files.</p></article>
           <article><b>microSD</b><h3>Portable storage</h3><p>Stores originals when requested, encrypted/compressed outputs, restored files, and operation logs without keys or contents.</p></article>
           <article><b>Browser</b><h3>No installed client</h3><p>Files move in bounded sequential chunks through a local-only interface, avoiding whole-file buffering on constrained hardware.</p></article>
@@ -95,7 +96,7 @@
         <h3>Important disclosure</h3>
         <p>This page describes an experimental founders prototype and forward-looking development plans. Product design, component selection, security properties, pricing, timelines, and commercial availability may change after engineering and independent review. Nothing here is an offer to sell securities or a guarantee of performance.</p>
       </section>
-    </main>
+    <section id="daily-workflow"><h2>Two modes. A clear boundary.</h2><p><strong>USB Drive mode</strong> exposes the public storage area. <strong>Vault mode</strong> switches to UniCrypt’s browser interface and private storage. The private partition is not exposed as a normal USB drive in vault mode; the two modes avoid simultaneous storage ownership.</p><ol><li>Switch to vault mode and connect using its fresh Wi-Fi credentials.</li><li>Open the local browser interface and select files.</li><li>Choose compression, encryption, both, or restoration. Processing happens on the device; keep the browser open until completion.</li><li>Review progress and outputs, then safely finish before changing modes or removing power.</li></ol></section><section id="vault-features"><h2>More than an output folder.</h2><div class="architecture-grid"><article><h3>Secure Folder</h3><p>Stores encrypted-only private files. Compression alone is not accepted for this destination.</p></article><article><h3>Wallet Vault</h3><p>Stores encrypted recovery backups with a separate key-derivation domain. It does not generate seed phrases, derive accounts, or sign cryptocurrency transactions.</p></article><article><h3>Encrypted file viewer</h3><p>Authenticates supported encrypted files before streaming a decrypted preview to the browser, without saving a restored copy to the storage card. The receiving browser can still see plaintext.</p></article><article><h3>Status and control</h3><p>A persistent display reports operating state. The browser provides file management, progress, destination selection, and previews for supported files.</p></article></div></section><section id="recovery"><h2>Know the limits before trusting files.</h2><p>The current prototype stores its device master key internally. Erasing or replacing that key can make encrypted files unrecoverable. Keep independent backups and test recovery before relying on the device.</p><p>Secure Boot, flash encryption, and hardware-backed key protection are not enabled in the current prototype. Resistance to physical key extraction has not been established. A compromised browser or connected computer can also capture plaintext.</p><p>UniCrypt starts offline. Its optional, explicitly approved online bridge reduces isolation and displays a warning; it is not a guarantee against malware or network threats.</p><div class="actions"><a class="button" href="contact.html?topic=unicrypt">Ask about the UniCrypt prototype</a><a class="button secondary" href="suite.html">Back to the suite</a></div></section></main>
 
     <footer>
       <div class="footer-brand"><img width="1200" height="1200" decoding="async" src="assets/unicorn-logo.webp" alt="" /><span><strong>Tethered Unicorn Labs</strong><small>Part of Tethered Unicorn Labs</small></span></div>
