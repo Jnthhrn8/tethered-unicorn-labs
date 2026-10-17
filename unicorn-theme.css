@@ -1,0 +1,38 @@
+/* One shared rainbow palette for every public Labs page. */
+:root{color-scheme:light;--bg:#fff8fc;--paper:#fff8fc;--panel:#fffdfd;--ink:#352347;--muted:#695373;--gold:#793c91;--gold-hi:#663080;--line:#d8c1e5;--violet:#78419b;--cyan:#246777;--rainbow:linear-gradient(105deg,#f18bbd,#ffc28a,#f5df92,#9bdec3,#9bd5ee,#c3a6ed)}
+body,body.unicrypt-page{background:radial-gradient(ellipse at 0 0,#ffe0f0,transparent 55%),radial-gradient(ellipse at 100% 20%,#d9f6fb,transparent 50%),#fff8fc;color:var(--ink)}
+body:before{opacity:.12;background-image:radial-gradient(#a471c4 1px,transparent 1px);background-size:28px 28px}
+body .site-header,body.unicrypt-page .site-header,body>header{background:linear-gradient(105deg,#fff0f8f5,#f0e7fff5,#e5f9fcf5);border-bottom:1px solid #cfb5df;border-top:6px solid transparent;border-image:var(--rainbow) 1;box-shadow:0 5px 25px #70468510}
+body .brand,body .brand strong,body.unicrypt-page .brand strong{color:#4f2b68}body .brand small{color:#793c91}body .site-header nav a{color:#5c3d71}body .site-header nav a:hover{color:#862e67}
+body .site-header .nav-cta,body .menu-button{background:#f3e8fc;color:#56306e;border-color:#b69acb}
+body .hero,body .forge-hero,body .page-hero{background:transparent}
+body h1,body h2,body h3{color:#48245e}body h1 em,body h2 em{color:#873e83}
+body .lede,body .copy,body .statement-copy,body .manifesto-grid,body .company-copy,body .forge-intro>p:not(.section-number):not(.product-label),body .affiliate-disclosure>p:not(.section-number){color:#695373}
+body .eyebrow,body .section-number,body .product-stage,body .timeline span,body .use-grid b,body .capability-grid article>span{color:#74418d}
+body .button,body .button.light{background:var(--rainbow);color:#352347;border:1px solid #bc91ce;box-shadow:0 5px 16px #8c5b9e19}
+body .button.secondary,body .button.ghost{background:#fff9ff;color:#63347b;border-color:#ba98ce}
+body .inline-link,body .text-link,body .direct-contact-note a,body .copy-button{color:#63347b;border-color:#b696c9}
+body .button:hover{filter:brightness(1.03)}
+body .capability-grid{background:transparent;gap:16px}
+body .capability-grid article,body .cards article,body .signal-card,body .timeline article,body .timeline article.active,body .round-amount,body .use-grid article,body .message-panel,body .affiliate-disclosure{background:linear-gradient(135deg,#fffdfd,#f3eafa);border:1px solid #d6bde5;border-radius:24px;box-shadow:0 10px 28px #6542780c;color:#352347}
+body .capability-grid article:nth-child(3n+2),body .cards article:nth-child(3n+2){background:linear-gradient(135deg,#fffdfd,#e0f5ef)}
+body .capability-grid article:nth-child(3n),body .cards article:nth-child(3n){background:linear-gradient(135deg,#fffdfd,#ffe8f2)}
+body .investors,body .testing,body .ask{background:linear-gradient(115deg,#ffe3f1,#ede5fc,#daf5ef);color:#352347}
+body .ask p,body .ask .text-link,body .investor-actions p,body .cards p,body .timeline p,body .principle-list p,body .capability-grid p,body .use-grid p,body .disclosure,body .fine{color:#695373}
+body .signal-card>span,body .funding-tiers article>b{color:#793c91}
+body .hero-mark img{filter:drop-shadow(0 18px 32px #83579c30)}body .orbit{border-color:#b991d766}body .hero-mark:after{background:#d7ace755}
+body .footer-links a,body .legal,body footer,body .contact-details article>small,body label,body .optional{color:#695373}
+body input,body select,body textarea{background:#fff;color:#352347;border-color:#b497c4}
+body .form-status.success{color:#236449}body .form-status.error{color:#a0264b}
+body .skip-link{background:#4f2b68;color:white}
+:focus-visible{outline:3px solid #287787;outline-offset:5px}
+.unicorn-flourish{display:flex;gap:14px;align-items:center;margin:0 0 24px;font-size:25px;line-height:1.4;pointer-events:none;user-select:none}
+.unicorn-flourish span{animation:unicorn-arrival 900ms ease-out both}.unicorn-flourish span:nth-child(2){animation-delay:100ms}.unicorn-flourish span:nth-child(3){animation-delay:200ms}
+@keyframes unicorn-arrival{from{opacity:0;transform:translateY(8px) rotate(-8deg)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.unicorn-flourish span{animation:none}html{scroll-behavior:auto}}
+@media print{body,body.unicrypt-page{background:white;color:#222}.unicorn-flourish{display:none}body:before{display:none}}
+body.unicrypt-page h1,body.unicrypt-page h2,body.unicrypt-page h3{color:#48245e}body.unicrypt-page h1 em{color:#873e83}body.unicrypt-page .lede,body .thesis-grid,body .security-reality>div:last-child,body .funding-copy p:last-child,body .architecture-grid p,body .funding-grid p,body .unicrypt-disclosure{color:#695373}
+body.unicrypt-page .site-header nav a,body.unicrypt-page .eyebrow,body.unicrypt-page .section-number,body .architecture-grid b,body .funding-grid span,body .portfolio-grid a{color:#63347b}
+body.unicrypt-page .button,body.unicrypt-page .site-header .nav-cta{background:var(--rainbow);color:#352347;border-color:#bc91ce}body.unicrypt-page .button.secondary{background:#fff9ff;color:#63347b}
+body .architecture-grid,body .funding-grid{background:transparent;gap:16px}body .architecture-grid article,body .funding-grid article,body .portfolio-grid article{background:#f5edfc;border:1px solid #d6bde5;border-radius:22px;color:#352347}
+body .funding{background:linear-gradient(120deg,#e5f8f5,#f3e7fc)}body.unicrypt-page footer{background:#f1e6fa;color:#695373}body .unicrypt-product-shot img{box-shadow:0 20px 45px #72459026}body .unicrypt-product-shot figcaption strong{color:#793c91}

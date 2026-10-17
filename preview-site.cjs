@@ -25,7 +25,7 @@ const assert = require('node:assert/strict');
       await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
       base = `http://127.0.0.1:${server.address().port}/`;
     }
-    browser = await chromium.launch({ headless: true });
+    browser = await chromium.launch({ headless: true, ...(process.env.PREVIEW_BROWSER_CHANNEL ? { channel: process.env.PREVIEW_BROWSER_CHANNEL } : {}) });
     const pages = fs.readdirSync(root).filter(f => f.endsWith('.html'));
     for (const width of [1440, 390, 320]) for (const file of pages) {
       const page = await browser.newPage({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
