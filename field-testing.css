@@ -1,0 +1,14 @@
+.application-hero { min-height: 0; padding-bottom: 70px !important; }
+.application-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 80px; align-items: start; }
+.application-copy { position: sticky; top: 118px; }
+.application-copy h2, .application-next h2 { font-size: clamp(2.3rem, 4vw, 4.2rem); }
+.application-copy p, .application-copy li { color: var(--muted); }
+.application-copy ul { padding-left: 1.2rem; }
+.application-copy li { margin: .8rem 0; }
+.application-form { margin: 0; padding: 38px; border: 1px solid var(--line); background: var(--panel); }
+.application-form .button { cursor: pointer; font: inherit; }
+.form-note { color: var(--muted); font-size: .8rem; margin: -10px 0 0; }
+.application-next ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; list-style: none; padding: 0; counter-reset: next; }
+.application-next li { counter-increment: next; padding: 25px; border: 1px solid var(--line); background: var(--panel); color: var(--muted); }
+.application-next li::before { content: "0" counter(next); display: block; color: var(--gold); font-size: .75rem; font-weight: 800; letter-spacing: .15em; margin-bottom: 18px; }
+@media (max-width: 860px) { .application-layout { grid-template-columns: 1fr; gap: 38px; } .application-copy { position: static; } .application-form { padding: 26px 20px; } .application-next ol { grid-template-columns: 1fr; } }

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07090d">
+  <meta name="description" content="Apply for the private Unicorn Forge field test.">
+  <title>Forge field testing · Tethered Unicorn Labs</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="canonical" href="https://tetheredunicorn.com/field-testing.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpages.css">
+  <link rel="stylesheet" href="unicorn-theme.css">
+  <link rel="stylesheet" href="field-testing.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Tethered Unicorn Labs home"><img width="1200" height="1200" decoding="async" src="assets/unicorn-logo.webp" alt=""><span><strong>TETHERED UNICORN</strong><small>LABS</small></span></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Primary navigation"><a href="forge.html">Unicorn Forge</a><a href="suite.html">Software suite</a><a href="contact.html">Contact</a></nav>
+  </header>
+  <main id="main" tabindex="-1" class="subpage application-page">
+    <section class="page-hero application-hero">
+      <div><p class="section-number">UNICORN FORGE / PRIVATE FIELD TEST</p><div class="unicorn-flourish" aria-hidden="true"><span>🌈</span><span>🦋</span><span>✨</span></div><h1>Bring your curiosity.<br><em>We’ll bring the Forge.</em></h1></div>
+      <p class="lede">Request a place in a small, adult-only field test for unfinished software. Forge itself is private; approved testers receive their sign-in invitation separately.</p>
+    </section>
+    <section class="application-layout">
+      <div class="application-copy"><p class="section-number">BEFORE YOU APPLY</p><h2>A careful early test.</h2><p>We are looking for people comfortable with unfinished software, candid feedback, and detailed review of their own test activity.</p><ul><li>Field testing is for adults 18 and older.</li><li>Requests are reviewed privately and access is not automatic.</li><li>Do not include passwords, private documents, or sensitive information.</li><li>Submitting this form does not create a Forge account.</li></ul></div>
+      <form id="accessRequestForm" class="application-form">
+        <p class="section-number">REQUEST ACCESS</p>
+        <div class="field-row"><label>Your name *<input name="name" maxlength="120" required autocomplete="name"></label><label>Email *<input name="email" type="email" maxlength="254" required autocomplete="email"></label></div>
+        <label>Preferred tester username *<input name="username" pattern="[a-z0-9][a-z0-9_-]{2,31}" minlength="3" maxlength="32" required autocomplete="username" aria-describedby="username-help"></label><p id="username-help" class="form-note">3–32 lowercase letters, numbers, underscores, or hyphens. Start with a letter or number.</p>
+        <label>What would you like to try in Forge? *<textarea name="reason" rows="4" maxlength="2000" required></textarea></label>
+        <label>What work or goals would you explore? *<textarea name="goals" rows="3" maxlength="2000" required></textarea></label>
+        <div class="field-row"><label>Preferred communication style *<input name="communicationStyle" maxlength="160" required placeholder="For example: concise and direct"></label><label>Experience with AI tools *<input name="experience" maxlength="160" required></label></div>
+        <label>Devices you would use for testing *<input name="devices" maxlength="800" required placeholder="For example: Windows laptop and Android phone"></label>
+        <label>Workflows you would test *<textarea name="workflows" rows="3" maxlength="1600" required></textarea></label>
+        <label>What frustrates you about current tools? *<textarea name="frustrations" rows="3" maxlength="2000" required></textarea></label>
+        <label>What is a must-have for you? *<textarea name="mustHave" rows="3" maxlength="2000" required></textarea></label>
+        <div class="field-row"><label>Comfort with the stated data practices *<select name="privacyComfort" required><option value="">Choose one</option><option>Comfortable</option><option>Comfortable with questions</option><option>Not comfortable</option></select></label><label>Testing availability *<input name="testingAvailability" maxlength="800" required placeholder="For example: evenings, two hours weekly"></label></div>
+        <label class="consent"><input name="ageConfirmed" type="checkbox" required> <span>I confirm that I am at least 18 years old. People under 18 may not register for or use this field test.</span></label>
+        <label class="consent"><input name="consent" type="checkbox" required> <span>I understand that the test is unfinished, that a human may review my application and test activity, and that I should not submit sensitive information. I consent to this application being reviewed for the field test.</span></label>
+        <button class="button" type="submit">Send my access request 🦋</button><p id="requestStatus" class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
+      </form>
+    </section>
+    <section id="what-happens-next" class="application-next"><p class="section-number">WHAT HAPPENS NEXT</p><h2>Request, review, invitation.</h2><ol><li>Your application enters a private review queue.</li><li>If it is a fit, The Unicorn sends an invitation with separate account-creation steps.</li><li>Only invited testers receive the private Forge sign-in address.</li></ol></section>
+  </main>
+  <footer><div class="footer-brand"><img width="1200" height="1200" decoding="async" src="assets/unicorn-logo.webp" alt=""><span><strong>Tethered Unicorn Labs</strong><small>Home of Unicorn Forge, Irideselle Search, and UniCrypt.</small></span></div><div class="footer-links"><a href="index.html">Labs home</a><a href="forge.html">Unicorn Forge</a><a href="contact.html">Contact</a></div><p class="legal">© <span id="year">2026</span> Tethered Unicorn Labs.</p><nav class="policy-links" aria-label="Website policies"><a href="privacy.html">Privacy</a><a href="terms.html">Website terms</a><a href="accessibility.html">Accessibility</a></nav></footer>
+  <script src="site.js"></script><script src="field-testing.js"></script>
+</body>
+</html>
