@@ -64,7 +64,11 @@ fetch('assets/lantern-company.json')
       if (!button) return;
       const filter = button.dataset.filter;
       filters.querySelectorAll('button').forEach(candidate => candidate.setAttribute('aria-pressed', String(candidate === button)));
-      grid.querySelectorAll('.person-card').forEach(card => { card.hidden = filter !== 'all' && !card.dataset.tags.split(' ').includes(filter); });
+      grid.querySelectorAll('.person-card').forEach(card => {
+        const tags = card.dataset.tags.split(' ');
+        const matches = filter === 'research' ? tags.some(tag => tag.includes('research') || tag === 'verification' || tag === 'public-records') : tags.includes(filter);
+        card.hidden = filter !== 'all' && !matches;
+      });
     });
   })
   .catch(() => { grid.append(element('p', 'The Lantern Company roster is temporarily unavailable.')); });
